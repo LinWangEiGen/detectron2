@@ -3,6 +3,9 @@
 #include <ATen/cuda/CUDAContext.h>
 #include <c10/cuda/CUDAGuard.h>
 #include <ATen/cuda/CUDAApplyUtils.cuh>
+
+#include "../box_iou_rotated/box_iou_rotated_utils.h"
+
 #ifdef WITH_CUDA
 #include "../box_iou_rotated/box_iou_rotated_utils.h"
 #endif

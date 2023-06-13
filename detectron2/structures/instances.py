@@ -131,6 +131,10 @@ class Instances:
 
         ret = Instances(self._image_size)
         for k, v in self._fields.items():
+            # print(f"at device: {k.device}")
+            v = v.to('cuda:0')
+            # print("v: ", v)
+            # print(f"at device: {v.device}")
             ret.set(k, v[item])
         return ret
 
